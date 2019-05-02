@@ -71,5 +71,16 @@ public class Categoria {
         
     }
     
+    public static Categoria buscar(int id) {
+        Categoria categoriaEncontrada = new Categoria();
+        for (Categoria categoria : listaCategorias) {
+            if (categoria.id == id) {
+                categoriaEncontrada = categoria;
+                break;
+            }
+        }
+        return categoriaEncontrada;
+    }
+    
     
 }
