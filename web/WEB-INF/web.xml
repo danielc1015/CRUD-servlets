@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>agregarUsuario</servlet-name>
+        <servlet-class>controllers.agregarUsuario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GuardarUsuarioController</servlet-name>
+        <servlet-class>controllers.GuardarUsuarioController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListaCiudadesController</servlet-name>
+        <servlet-class>controllers.ListaCiudadesController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>agregarUsuario</servlet-name>
+        <url-pattern>/agregarusuario.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GuardarUsuarioController</servlet-name>
+        <url-pattern>/guardarusuario.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListaCiudadesController</servlet-name>
+        <url-pattern>/listaciudades.do</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
