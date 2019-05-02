@@ -31,10 +31,6 @@ public class agregarUsuario extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         Ciudad ciudad = new Ciudad();
-        ciudad.agregar(new Ciudad("Chillan"));
-        ciudad.agregar(new Ciudad("San Carlos"));
-        ciudad.agregar(new Ciudad("Concepcion"));
-        
         request.setAttribute("listaCiudades", ciudad.listar());
         request.getRequestDispatcher("agregarusuario.jsp").forward(request, response);
     }
