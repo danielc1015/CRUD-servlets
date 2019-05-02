@@ -24,12 +24,12 @@
 
     <body>
         <!-- Menu desde archivo externo -->
-      <jsp:include page="menu.html" />
+      <jsp:include page="fixed/menu.html" />
         
         <!-- Page Layout here -->
         <div class="row">
         <!-- Menu y navbar desde archivo externo -->
-        <jsp:include page="sidenav.html" />
+        <jsp:include page="fixed/sidenav.html" />
 
             <div class="col s12 m8 l9">
                 <h3 class="heading">Agregar Usuario</h3>
