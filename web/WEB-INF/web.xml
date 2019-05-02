@@ -12,6 +12,10 @@
         <servlet-name>ListaCiudadesController</servlet-name>
         <servlet-class>controllers.ListaCiudadesController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AgregarCiudadController</servlet-name>
+        <servlet-class>controllers.AgregarCiudadController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>agregarUsuario</servlet-name>
         <url-pattern>/agregarusuario.do</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>ListaCiudadesController</servlet-name>
         <url-pattern>/listaciudades.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AgregarCiudadController</servlet-name>
+        <url-pattern>/agregarciudad.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
