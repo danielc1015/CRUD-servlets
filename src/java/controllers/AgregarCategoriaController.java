@@ -67,8 +67,7 @@ public class AgregarCategoriaController extends HttpServlet {
         String nombre = request.getParameter("nombre");
         category.agregar(new Categoria(nombre));
         
-        request.setAttribute("lista", category.listar());
-        request.getRequestDispatcher("listacategorias.jsp").forward(request, response);
+        response.sendRedirect("listacategorias.do");
     }
 
     /**

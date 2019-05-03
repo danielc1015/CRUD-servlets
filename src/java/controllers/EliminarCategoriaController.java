@@ -11,13 +11,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import models.Ciudad;
+import models.Categoria;
 
 /**
  *
  * @author danielcandiapereira
  */
-public class EliminarCiudadController extends HttpServlet {
+public class EliminarCategoriaController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -30,13 +30,13 @@ public class EliminarCiudadController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        Categoria category = new Categoria();
         
-        int idCiudad = Integer.parseInt(request.getParameter("ciudad"));
-        Ciudad city = new Ciudad();
-        city.eliminar(idCiudad);
+        int idCategoria = Integer.parseInt(request.getParameter("categoria"));
+        category.eliminar(idCategoria);
         
-        response.sendRedirect("listaciudades.do");
-        
+        response.sendRedirect("listacategorias.do");
+     
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -66,8 +66,7 @@ public class AgregarCiudadController extends HttpServlet {
         
         city.agregar(new Ciudad(nombre));
         
-        request.setAttribute("lista", city.listar());
-        request.getRequestDispatcher("listaciudades.jsp").forward(request, response);
+        response.sendRedirect("listaciudades.do");
     }
 
     /**

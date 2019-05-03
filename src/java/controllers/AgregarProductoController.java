@@ -79,8 +79,7 @@ public class AgregarProductoController extends HttpServlet {
         
         product.agregar(new Producto(nombre, precio, stock, categoria, detalle, foto));
         
-        request.setAttribute("lista", product.listar());
-        request.getRequestDispatcher("listaproductos.jsp").forward(request, response);
+        response.sendRedirect("listaproductos.do");
     }
 
     /**

@@ -82,5 +82,15 @@ public class Categoria {
         return categoriaEncontrada;
     }
     
+    public void eliminar(int id) {
+        
+        for (Categoria categoria : listaCategorias) {
+            if (categoria.id == id) {
+                listaCategorias.remove(categoria);
+                break;
+            }
+        }
+    }
+    
     
 }

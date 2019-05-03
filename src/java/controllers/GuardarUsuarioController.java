@@ -43,8 +43,7 @@ public class GuardarUsuarioController extends HttpServlet {
         Usuario user = new Usuario();
         user.agregar(new Usuario(nombre, apellido, ciudad));
         
-        request.setAttribute("lista", user.listar());
-        request.getRequestDispatcher("listausuarios.jsp").forward(request, response);
+        response.sendRedirect("listausuarios.do");
 
     }
 
