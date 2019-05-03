@@ -82,7 +82,7 @@
           <div class="row"> 
             <div class="col s2 m2 l2 offset-l10">
 
-              <a href="" class="btn-floating btn-large blue ">
+              <a href="agregarcategoria.do" class="btn-floating btn-large blue ">
                 <i class="material-icons">add</i>
               </a>
 
