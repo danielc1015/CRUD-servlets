@@ -107,6 +107,7 @@ public class Producto {
         return (ArrayList)listaProductos;  
     }
     
+    
     public void agregar(Object objeto) {
         int idMayor = 1;
         
