@@ -69,7 +69,7 @@
                             <i class="material-icons">edit</i>
                           </a>
 
-                          <a href="" class="btn-floating red">
+                          <a href="eliminarproducto.do?producto=<%out.print(producto.getId());%>" class="btn-floating red">
                             <i class="material-icons">delete</i>
                           </a>
 
@@ -90,7 +90,7 @@
           <div class="row"> 
             <div class="col s2 m2 l2 offset-l10">
 
-              <a href="agregarproducto.do" class="btn-floating btn-large blue ">
+              <a href="agregarproducto.do" class="btn-floating btn-large purple darken-4 ">
                 <i class="material-icons">add</i>
               </a>
 

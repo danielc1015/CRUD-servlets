@@ -40,7 +40,7 @@
                     </div>
 
                     <div class="row">
-                        <input type= "submit" class="waves-effect waves-light btn" placeholder="Guardar">
+                        <input type= "submit" class="waves-effect waves-light btn purple darken-4 white-text" placeholder="Guardar">
                     </div>        
 
                 </form>

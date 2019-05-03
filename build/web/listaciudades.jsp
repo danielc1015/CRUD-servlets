@@ -82,7 +82,7 @@
           <div class="row"> 
             <div class="col s2 m2 l2 offset-l10">
 
-              <a href="agregarciudad.do" class="btn-floating btn-large blue ">
+              <a href="agregarciudad.do" class="btn-floating btn-large purple darken-4 ">
                 <i class="material-icons">add</i>
               </a>
 

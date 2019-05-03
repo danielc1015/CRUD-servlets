@@ -128,6 +128,16 @@ public class Producto {
                 producto.detalle, producto.foto));   
     }
     
+    public void eliminar(int id) {
+        
+        for (Producto producto : listaProductos) {
+            if (producto.id == id) {
+                listaProductos.remove(producto);
+                break;
+            }
+        }
+    }
+    
     
     
 }
