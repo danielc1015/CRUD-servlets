@@ -38,7 +38,7 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ListaCategoriasController</servlet-name>
-        <url-pattern>/listacategorias</url-pattern>
+        <url-pattern>/listacategorias.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
