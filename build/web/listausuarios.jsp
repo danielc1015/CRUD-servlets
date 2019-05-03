@@ -65,7 +65,7 @@
                         <i class="material-icons">edit</i>
                       </a>
 
-                      <a href="" class="btn-floating red">
+                        <a href="eliminarusuario.do?usuario=<%out.print(user.getId());%>" class="btn-floating red">
                         <i class="material-icons">delete</i>
                       </a>
 

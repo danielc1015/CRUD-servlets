@@ -36,6 +36,10 @@
         <servlet-name>EliminarCiudadController</servlet-name>
         <servlet-class>controllers.EliminarCiudadController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EliminarUsuarioController</servlet-name>
+        <servlet-class>controllers.EliminarUsuarioController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>agregarUsuario</servlet-name>
         <url-pattern>/agregarusuario.do</url-pattern>
@@ -71,6 +75,10 @@
     <servlet-mapping>
         <servlet-name>EliminarCiudadController</servlet-name>
         <url-pattern>/eliminarciudad.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EliminarUsuarioController</servlet-name>
+        <url-pattern>/eliminarusuario.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
