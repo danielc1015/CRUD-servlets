@@ -32,6 +32,10 @@
         <servlet-name>ListaProductosController</servlet-name>
         <servlet-class>controllers.ListaProductosController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EliminarCiudadController</servlet-name>
+        <servlet-class>controllers.EliminarCiudadController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>agregarUsuario</servlet-name>
         <url-pattern>/agregarusuario.do</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>ListaProductosController</servlet-name>
         <url-pattern>/listaproductos.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EliminarCiudadController</servlet-name>
+        <url-pattern>/eliminarciudad.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -77,6 +77,17 @@ public class Ciudad {
     }
     
     
+    public void eliminar(int id) {
+        
+        for (Ciudad ciudad : listaCiudades) {
+            if (ciudad.id == id) {
+                listaCiudades.remove(ciudad);
+                break;
+            }
+        }
+    }
+    
+    
     
     
     

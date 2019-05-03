@@ -61,7 +61,7 @@
                             <i class="material-icons">edit</i>
                           </a>
 
-                          <a href="" class="btn-floating red">
+                          <a href="eliminarciudad.do?ciudad=<%out.print(ciudad.getId());%>" class="btn-floating red">
                             <i class="material-icons">delete</i>
                           </a>
 
