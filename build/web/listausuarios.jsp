@@ -1,7 +1,7 @@
 <%-- 
     Document   : listausuarios.jsp
     Created on : 25-04-2019, 10:19:07
-    Author     : danielcardenas
+    Author     : danielcandia
 --%>
 <%@page import="java.util.ArrayList" %>
 <%@page import="models.Usuario"%>
