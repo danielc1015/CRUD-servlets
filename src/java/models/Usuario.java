@@ -116,6 +116,17 @@ public class Usuario implements MetodosImpl{
             }
         }
     }
+    
+    public Usuario buscar(int id) {
+        Usuario foundUser = new Usuario();
+        for (Usuario usuario : listaUsuarios) {
+            if (usuario.id == id) {
+                foundUser = usuario;
+                break;
+            }
+        }
+        return foundUser;
+    }
 
     @Override
     public ArrayList<Object> listar() {
