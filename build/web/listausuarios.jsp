@@ -21,20 +21,7 @@
     </head>
 
     <body>
-        <!-- Modal Structure -->
-        <div id="modal1" class="modal">
-            <div class="modal-content">
-                <h4>Modal Header</h4>
-                <p>A bunch of text</p>
-            </div>
-            <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-            </div>
-        </div>
-        
-        
-        
-        
+
         <!-- Menu desde archivo externo -->
         <jsp:include page="fixed/menu.html" />
 
@@ -47,9 +34,6 @@
             <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
 
                 <h3 class="heading"> Usuarios </h3>
-                <!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
-
 
                 <div class="row">
                     <div class="col s12 m12">
@@ -79,8 +63,8 @@
                                         <a href="editarusuario.do?id=<%out.print(user.getId());%>" class="btn-floating green">
                                             <i class="material-icons">edit</i>
                                         </a>
-
-                                        <a href="eliminarusuario.do?usuario=<%out.print(user.getId());%>" class="btn-floating red">
+                                        <!-- Modal Trigger -->
+                                        <a data-target="modal1" class="btn modal-trigger btn-floating red" onclick="eliminar(<%out.print(user.getId());%>)">
                                             <i class="material-icons">delete</i>
                                         </a>
 
@@ -108,17 +92,26 @@
                     </div>
                 </div>
 
-
-
-
-
             </div>
 
+        </div>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>¿Estás seguro?</h4>
+                <p>Se eliminará el usuario y no podrás deshacer los cambios</p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-close waves-effect waves-red btn-flat">Cancelar</button>
+                <a id="btn-eliminar" href="" class="modal-close waves-effect waves-green btn-flat">Si, eliminar</a>
+            </div>
         </div>
 
 
 
         <!--JavaScript at end of body for optimized loading-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script>
             $(document).ready(function () {
@@ -127,6 +120,11 @@
                 $('select').formSelect();
                 $('.modal').modal();
             });
+            
+            function eliminar(id) {
+                console.log(id);
+                document.getElementById('btn-eliminar').setAttribute('href', 'eliminarusuario.do?usuario=' + id);
+            }
         </script>
     </body>
 </html>
