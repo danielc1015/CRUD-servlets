@@ -48,6 +48,10 @@
         <servlet-name>EliminarProductoController</servlet-name>
         <servlet-class>controllers.EliminarProductoController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EditarUsuarioController</servlet-name>
+        <servlet-class>controllers.EditarUsuarioController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>agregarUsuario</servlet-name>
         <url-pattern>/agregarusuario.do</url-pattern>
@@ -95,6 +99,10 @@
     <servlet-mapping>
         <servlet-name>EliminarProductoController</servlet-name>
         <url-pattern>/eliminarproducto.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditarUsuarioController</servlet-name>
+        <url-pattern>/editarusuario.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
