@@ -88,7 +88,15 @@ public class Ciudad {
     }
     
     
-    
+    public void editar(int id, Object objeto) {
+        Ciudad ciudadNueva = (Ciudad)objeto;
+        
+        for (Ciudad ciudad : listaCiudades) {
+            if (ciudad.id == id) {
+                ciudad.nombre = ciudadNueva.nombre;
+            }
+        }
+    }
     
     
     

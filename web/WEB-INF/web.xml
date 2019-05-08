@@ -52,6 +52,10 @@
         <servlet-name>EditarUsuarioController</servlet-name>
         <servlet-class>controllers.EditarUsuarioController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EditarCiudadController</servlet-name>
+        <servlet-class>controllers.EditarCiudadController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>agregarUsuario</servlet-name>
         <url-pattern>/agregarusuario.do</url-pattern>
@@ -103,6 +107,10 @@
     <servlet-mapping>
         <servlet-name>EditarUsuarioController</servlet-name>
         <url-pattern>/editarusuario.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditarCiudadController</servlet-name>
+        <url-pattern>/editarciudad.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -122,7 +122,6 @@
             });
             
             function eliminar(id) {
-                console.log(id);
                 document.getElementById('btn-eliminar').setAttribute('href', 'eliminarusuario.do?usuario=' + id);
             }
         </script>

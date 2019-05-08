@@ -57,7 +57,7 @@
                                     <td><%out.print(ciudad.getNombre()); %></td>      
                                     <td>
 
-                                        <a href="" class="btn-floating green">
+                                        <a href="editarciudad.do?id=<%out.print(ciudad.getId());%>" class="btn-floating green">
                                             <i class="material-icons">edit</i>
                                         </a>
                                         <!-- Modal Trigger -->
