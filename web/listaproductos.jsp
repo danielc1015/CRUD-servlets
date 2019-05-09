@@ -120,7 +120,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script>
-                                            $(document).ready(function () {
+           $(document).ready(function () {
                                                 $('.sidenav').sidenav();
                                                 $('.fixed-action-btn').floatingActionButton();
                                                 $('select').formSelect();

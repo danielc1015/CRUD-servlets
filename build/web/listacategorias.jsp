@@ -57,7 +57,7 @@
                                     <td><%out.print(categoria.getNombre()); %></td>      
                                     <td>
 
-                                        <a href="" class="btn-floating green">
+                                        <a href="editarcategoria.do?id=<%out.print(categoria.getId());%>" class="btn-floating green">
                                             <i class="material-icons">edit</i>
                                         </a>
 

@@ -92,5 +92,15 @@ public class Categoria {
         }
     }
     
+    public void editar(int id, Object objeto) {
+        Categoria categoriaNuevo = (Categoria)objeto;
+        
+        for (Categoria categoria : listaCategorias) {
+            if (categoria.id == id) {
+                categoria.nombre = categoriaNuevo.nombre;
+            }
+        }
+    }
+    
     
 }

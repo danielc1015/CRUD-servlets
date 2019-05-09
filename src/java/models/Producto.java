@@ -138,6 +138,22 @@ public class Producto {
         }
     }
     
+
+    public void editar(int id, Object objeto) {
+        Producto productoNuevo = (Producto)objeto;
+        
+        for (Producto producto : listaProductos) {
+            if (producto.id == id) {
+                producto.nombre = productoNuevo.nombre;
+                producto.precio = productoNuevo.stock;
+                producto.precio = productoNuevo.precio;
+                producto.categoria = productoNuevo.categoria;
+                producto.detalle = productoNuevo.detalle;
+                producto.foto = productoNuevo.foto;
+            }
+        }
+    }
+    
     
     
 }
