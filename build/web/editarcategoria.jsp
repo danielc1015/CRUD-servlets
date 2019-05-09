@@ -32,7 +32,7 @@
         <jsp:include page="fixed/sidenav.html" />
 
             <div class="col s12 m8 l9">
-                <h3 class="heading">Agregar Categoria</h3>
+                <h3 class="heading">Editar Categoría</h3>
                 <form class="col s12" method="POST" action="editarcategoria.do">
                     <input name="id" type="hidden" value="<%out.print(categoria.getId());%>">
                     <div class="row">

@@ -11,14 +11,14 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import models.Producto;
 import models.Categoria;
+import models.Producto;
 
 /**
  *
  * @author danielcandiapereira
  */
-public class AgregarProductoController extends HttpServlet {
+public class EditarProductoController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -31,7 +31,6 @@ public class AgregarProductoController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -47,10 +46,16 @@ public class AgregarProductoController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-
+        
+        int idProducto = Integer.parseInt(request.getParameter("id"));
+        Producto product =  new Producto();
         Categoria category = new Categoria();
+        
+        request.setAttribute("producto", product.buscar(idProducto));
         request.setAttribute("listaCategorias", category.listar());
-        request.getRequestDispatcher("agregarproducto.jsp").forward(request, response);
+        
+        request.getRequestDispatcher("editarproducto.jsp").forward(request, response);
+        
     }
 
     /**
@@ -65,19 +70,18 @@ public class AgregarProductoController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        
         Producto product = new Producto();
-
+        
+        int idProducto = Integer.parseInt(request.getParameter("id"));
         String nombre = request.getParameter("nombre");
         long precio = Long.parseLong(request.getParameter("precio"));
-        int stock = Integer.parseInt(request.getParameter("stock"));
         int idCategoria = Integer.parseInt(request.getParameter("categoria"));
-        String detalle = request.getParameter("detalle");
+        int stock = Integer.parseInt(request.getParameter("stock"));
         String foto = request.getParameter("foto");
-        
+        String detalle = request.getParameter("detalle");
         Categoria categoria = Categoria.buscar(idCategoria);
         
-        product.agregar(new Producto(nombre, precio, stock, categoria, detalle, foto));
+        product.editar(idProducto, new Producto(nombre, precio, stock, categoria, detalle, foto));
         
         response.sendRedirect("listaproductos.do");
     }

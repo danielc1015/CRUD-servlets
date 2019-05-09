@@ -30,7 +30,7 @@
         <jsp:include page="fixed/sidenav.html" />
 
             <div class="col s12 m8 l9">
-                <h3 class="heading">Agregar Categoria</h3>
+                <h3 class="heading">Agregar Categoría</h3>
                 <form class="col s12" method="POST" action="agregarcategoria.do">
                     <div class="row">
                         <div class="input-field col s6">

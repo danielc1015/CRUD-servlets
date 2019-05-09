@@ -47,7 +47,7 @@
                                     <th>Nombre</th>
                                     <th>Precio</th>
                                     <th>Stock</th>
-                                    <th>Categoria</th>
+                                    <th>Categoría</th>
                                     <th>Detalle</th>                    
                                     <th>Acciones</th>
                                 </tr>
@@ -65,7 +65,7 @@
                                     <td><%out.print(producto.getDetalle()); %></td>  
                                     <td>
 
-                                        <a href="" class="btn-floating green">
+                                        <a href="editarproducto.do?id=<%out.print(producto.getId());%>" class="btn-floating green">
                                             <i class="material-icons">edit</i>
                                         </a>
 

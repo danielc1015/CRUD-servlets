@@ -48,7 +48,7 @@
                     <div class="row">
                         <div class="input-field col s6">
                             <select id="categoria" name="categoria">
-                                <option value="" disabled selected>Escoja una opcion</option>
+                                <option value="" disabled selected>Escoja una opción</option>
 
                                 <%
                                     for (Categoria categoria : listaCategorias) {
@@ -58,7 +58,7 @@
                                     }
                                 %>
                             </select>
-                            <label for="categoria">Categoria</label>
+                            <label for="categoria">Categoría</label>
                         </div>
                     </div>
                     <div class="row">

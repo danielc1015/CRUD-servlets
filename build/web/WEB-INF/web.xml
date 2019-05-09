@@ -60,6 +60,10 @@
         <servlet-name>EditarCategoriaController</servlet-name>
         <servlet-class>controllers.EditarCategoriaController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EditarProductoController</servlet-name>
+        <servlet-class>controllers.EditarProductoController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>agregarUsuario</servlet-name>
         <url-pattern>/agregarusuario.do</url-pattern>
@@ -119,6 +123,10 @@
     <servlet-mapping>
         <servlet-name>EditarCategoriaController</servlet-name>
         <url-pattern>/editarcategoria.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditarProductoController</servlet-name>
+        <url-pattern>/editarproducto.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

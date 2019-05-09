@@ -16,7 +16,7 @@ public class Producto {
     
     private int id;
     private String nombre;
-    private double precio;
+    private long precio;
     private int stock;
     private Categoria categoria;
     private String detalle;
@@ -24,7 +24,7 @@ public class Producto {
     
     public Producto(){}
 
-    private Producto(int id, String nombre, double precio, int stock, Categoria categoria, String detalle, String foto) {
+    private Producto(int id, String nombre, long precio, int stock, Categoria categoria, String detalle, String foto) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
@@ -34,7 +34,7 @@ public class Producto {
         this.foto = foto;
     }
 
-    public Producto(String nombre, double precio, int stock, Categoria categoria, String detalle, String foto) {
+    public Producto(String nombre, long precio, int stock, Categoria categoria, String detalle, String foto) {
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
@@ -63,7 +63,7 @@ public class Producto {
         return precio;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(long precio) {
         this.precio = precio;
     }
 
@@ -152,6 +152,18 @@ public class Producto {
                 producto.foto = productoNuevo.foto;
             }
         }
+    }
+    
+    public Producto buscar(int id) {
+        Producto productoF = new Producto();
+        
+        for (Producto producto : listaProductos) {
+            if (producto.id == id) {
+                productoF = producto;
+                break;
+            }
+        }
+        return productoF;
     }
     
     

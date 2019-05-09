@@ -47,7 +47,7 @@
                     <div class="row">
                         <div class="input-field col s6">
                             <select id="city" name="ciudad">
-                                <option value="" disabled selected>Escoja una opcion</option>
+                                <option value="" disabled selected>Escoja una opción</option>
 
                                 <%
                                     for (Ciudad ciudad : listaCiudades) {

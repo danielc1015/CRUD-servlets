@@ -97,7 +97,7 @@
         <div id="modal1" class="modal">
             <div class="modal-content">
                 <h4>¿Estás seguro?</h4>
-                <p>Se eliminará el usuario y no podrás deshacer los cambios</p>
+                <p>Se eliminará la ciudad y no podrás deshacer los cambios</p>
             </div>
             <div class="modal-footer">
                 <button class="modal-close waves-effect waves-red btn-flat">Cancelar</button>

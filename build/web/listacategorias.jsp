@@ -34,7 +34,7 @@
 
             <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
 
-                <h3 class="heading"> Categorias </h3>
+                <h3 class="heading"> Categorías </h3>
 
 
                 <div class="row">
@@ -103,7 +103,7 @@
         <div id="modal1" class="modal">
             <div class="modal-content">
                 <h4>¿Estás seguro?</h4>
-                <p>Se eliminará el usuario y no podrás deshacer los cambios</p>
+                <p>Se eliminará la categoría y no podrás deshacer los cambios</p>
             </div>
             <div class="modal-footer">
                 <button class="modal-close waves-effect waves-red btn-flat">Cancelar</button>

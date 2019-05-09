@@ -1,12 +1,14 @@
 <%-- 
-    Document   : agregarproducto
-    Created on : 03-05-2019, 12:48:20
+    Document   : editarproducto
+    Created on : 08-05-2019, 22:15:48
     Author     : danielcandiapereira
 --%>
 
-<%@page import="java.util.ArrayList" %>
+<%@page import="java.util.ArrayList"%>
 <%@page import="models.Categoria"%>
+<%@page import="models.Producto"%>
 <% ArrayList<Categoria> listaCategorias = (ArrayList<Categoria>) request.getAttribute("listaCategorias");%>
+<% Producto producto = (Producto) request.getAttribute("producto"); %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
@@ -33,15 +35,16 @@
             <jsp:include page="fixed/sidenav.html" />
 
             <div class="col s12 m8 l9">
-                <h3 class="heading">Agregar Producto</h3>
-                <form class="col s12" method="POST" action="agregarproducto.do">
+                <h3 class="heading">Editar Producto</h3>
+                <form class="col s12" method="POST" action="editarproducto.do">
+                    <input name="id" type="hidden" value="<%out.print(producto.getId());%>">
                     <div class="row">
                         <div class="input-field col s6">
-                            <input id="nombre" name="nombre" type="text" class="validate">
+                            <input value="<%out.print(producto.getNombre());%>" id="nombre" name="nombre" type="text" class="validate">
                             <label for="nombre">Nombre</label>
                         </div>
                         <div class="input-field col s6">
-                            <input id="precio" name="precio" type="number" class="validate">
+                            <input value="<%out.print(producto.getPrecio());%>" id="precio" name="precio" type="number" class="validate">
                             <label for="precio">Precio</label>
                         </div>
                     </div>
@@ -53,7 +56,7 @@
                                 <%
                                     for (Categoria categoria : listaCategorias) {
                                 %>
-                                <option value="<%out.print(categoria.getId());%>"><%out.print(categoria.getNombre());%></option>
+                                <option <%out.print(producto.getCategoria().getId() == categoria.getId()? "selected":"");%> value="<%out.print(categoria.getId());%>"><%out.print(categoria.getNombre());%></option>
                                 <%
                                     }
                                 %>
@@ -63,18 +66,18 @@
                     </div>
                     <div class="row">
                         <div class="input-field col s6">
-                            <input id="stock" name="stock" type="number" class="validate">
+                            <input value="<%out.print(producto.getStock());%>" id="stock" name="stock" type="number" class="validate">
                             <label for="stock">Stock</label>
                         </div>
                         <div class="input-field col s6">
-                            <input id="foto" name="foto" type="text" class="validate">
+                            <input value="<%out.print(producto.getFoto());%>" id="foto" name="foto" type="text" class="validate">
                             <label for="foto">Foto</label>
                         </div>
                     </div>
                             
                     <div class="row">
                         <div class="input-field col s6">
-                            <input id="detalle" name="detalle" type="text" class="validate">
+                            <input value="<%out.print(producto.getDetalle());%>" id="detalle" name="detalle" type="text" class="validate">
                             <label for="detalle">Detalle</label>
                         </div>
                     </div>  
